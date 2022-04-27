@@ -1,1 +1,9 @@
-# nginx
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  become_user: root
+  tasks:
+    - apt:
+        name: nginx
+      when: ansible_os_family == "Debian"

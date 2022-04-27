@@ -4,6 +4,6 @@
   become: true
   become_user: root
   tasks:
-    - apt:
+    - yum:
         name: nginx
-      when: ansible_os_family == "Debian"
+      when: ansible_os_family == "centos8"
